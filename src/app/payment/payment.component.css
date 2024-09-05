@@ -1,0 +1,51 @@
+/* Container for the payment page */
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background: url('/assets/banner.jpg') no-repeat center center fixed; /* Background image */
+  background-size: cover; /* Cover the entire container */
+  background-position: top;
+}
+
+/* Styling for the form */
+.payment-form {
+  background: #ffffff; /* Semi-transparent black background for better contrast */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for elevation */
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* Maximum width for the form */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Center the heading */
+.payment-form h1 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style for form fields */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px; /* Space between form fields */
+}
+
+/* Style for input elements */
+input {
+  font-size: 0.9em; /* Smaller input text */
+}
+
+/* Style for error messages */
+mat-error {
+  color: #f44336; /* Red color for error messages */
+}
+
+/* Style for the submit button */
+button {
+  width: 100%;
+  margin-top: 20px;
+}

@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Donate Money</h1>
+<div mat-dialog-content>
+  <form [formGroup]="donateForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Donation Amount</mat-label>
+      <input matInput formControlName="amount" type="number">
+      <mat-error *ngIf="amount.hasError('required')">
+        Amount is required.
+      </mat-error>
+      <mat-error *ngIf="amount.hasError('min')">
+        Amount must be greater than 0.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onDonate()">Donate</button>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+</div>

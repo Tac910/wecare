@@ -1,0 +1,50 @@
+.home-banner {
+  background-image: url('/assets/banner.jpg'); /* Path to your banner image */
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  color: white; /* Text color to ensure readability on the background */
+  text-align: center;
+}
+
+.home-content {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text readability */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.home-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.8); /* Light background for the progress bar */
+  border-radius: 8px;
+  height: 25px;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.progress-bar-fill {
+  background: #4caf50; /* Fill color */
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}

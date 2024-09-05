@@ -1,0 +1,41 @@
+<div class="payment-container">
+  <div class="payment-form">
+    <h1>Payment Details</h1>
+    <form [formGroup]="paymentForm" (ngSubmit)="onPay()">
+      <mat-form-field appearance="fill">
+        <mat-label>Card Number</mat-label>
+        <input matInput formControlName="cardNumber">
+        <mat-error *ngIf="cardNumber.hasError('required')">
+          Card number is required.
+        </mat-error>
+        <mat-error *ngIf="cardNumber.hasError('pattern')">
+          Card number must be 16 digits.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Expiry Date</mat-label>
+        <input matInput formControlName="expiry">
+        <mat-error *ngIf="expiry.hasError('required')">
+          Expiry date is required.
+        </mat-error>
+        <mat-error *ngIf="expiry.hasError('pattern')">
+          Expiry date must be in MM/YY format.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>CVV</mat-label>
+        <input matInput formControlName="cvv">
+        <mat-error *ngIf="cvv.hasError('required')">
+          CVV is required.
+        </mat-error>
+        <mat-error *ngIf="cvv.hasError('pattern')">
+          CVV must be 3 digits.
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Pay</button>
+    </form>
+  </div>
+</div>
